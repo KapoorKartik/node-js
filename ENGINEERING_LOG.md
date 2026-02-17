@@ -10,4 +10,7 @@ Rule: No fluff. Only real experiments.
 
 **Learning Event Loop**
 
-So even loop in node js is async i/o operations
+- So even loop in node js is async i/o operations
+- That is in nature is non blocking 
+- So it's a non blocking i/o that levergaes the multithreading of kernal
+- Till now this is how much i know  
