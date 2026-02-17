@@ -1,3 +1,1 @@
-const k = 'kartik'
-
-console.log(k)
+// what is event loop in node js 
