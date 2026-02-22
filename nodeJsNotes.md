@@ -1,14 +1,5 @@
-# 🚀 Engineering Log
-
-This file tracks my backend + AI engineering journey.
-Rule: No fluff. Only real experiments.
-
----
-## Week 1
-### Day 1
-
-**Learning Event Loop**
 ### Node js 
+---
 - Node js is a runtime environment that allows to build server side application with java script
 #### Even Loop
 - Simple Defination
