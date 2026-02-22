@@ -43,6 +43,7 @@ C
 ```
 - But what if I first call the funcion and then console will the output
 differs or still be the same?
+
 ```
 function A() {
   console.log("A");
