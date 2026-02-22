@@ -90,3 +90,24 @@ B
 - To standardise this in 2020 open js foundation that there should be same global object name in everywhere be it browser, node js, webworkes so they came up with common name 
 - globalThis it'll work in everywhere 
 ![example of browser showing same result](image-2.png)
+
+### Common js modules (cjs) and Ecma Script modujes (mjs)
+### Node.js Module Systems: CJS (Common JS Module) vs. (ESM ES Modules/ MJS)
+
+- Common js module
+  - module.export = functionC();
+  - require('filename.js')
+  - by deafult node uses cjs {type : "commonjs"}
+  - older way of doing export import
+  - sync means till the time require('filename.js') loads code will not go ahead
+  - non strict mode
+- ES Modules
+  - to enable need to add {type : "module"} in package.json
+  - export func abc, import {func name} from 'file name'
+  - going forward this will become standard accoding to open js foundation
+  - async means code will run even if the file is still loading
+  - strict `mode` 
+
+- What is module.export it's is empty object
+- Module is a collection of code which is private to itself it exist seprately 
+- We can access by module.exports then only we can access this inside other files
