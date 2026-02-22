@@ -1,6 +1,11 @@
 ### Node js 
 ---
 - Node js is a runtime environment that allows to build server side application with java script
+- REPL 
+  - Read
+  - Evaluate
+  - Print
+  - Loop
 #### Even Loop
 - Simple Defination
    - The Event Loop is the mechanism that allows Node.js to handle multiple operations using a single thread.
@@ -68,3 +73,20 @@ C
 A
 B
 ```
+## Node js
+- So Node js is a js runtime environment build on chrome's V8 engine plus somemore superpowers 
+- Whenever we write a code that code is passed into v8 engine and v8 engine execute the code
+![alt text](image.png)
+- In browser there is a global object known as window, people thinks it's coming from v8 engine
+- No it is given by browser
+- In node js there is also global object and it's name is global
+- So global is not inside v8 engine but inside nodejs given by nodejs
+- It includes setTimeout, setInterval
+- This is the one of superpower
+![alt text](image-1.png)
+- But console.log(this) or window will work in browser but not in node js and return empty object because global object is global inside node js 
+- console.log(global) !== console.log(window or this or self or frames)
+- Why all window or this or self or frames refering to same global objects in browser
+- To standardise this in 2020 open js foundation that there should be same global object name in everywhere be it browser, node js, webworkes so they came up with common name 
+- globalThis it'll work in everywhere 
+![example of browser showing same result](image-2.png)
