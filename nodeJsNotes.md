@@ -92,7 +92,6 @@ B
 ![example of browser showing same result](image-2.png)
 
 ### Common js modules (cjs) and Ecma Script modujes (mjs)
-### Node.js Module Systems: CJS (Common JS Module) vs. (ESM ES Modules/ MJS)
 
 - Common js module
   - module.export = functionC();
@@ -111,3 +110,46 @@ B
 - What is module.export it's is empty object
 - Module is a collection of code which is private to itself it exist seprately 
 - We can access by module.exports then only we can access this inside other files
+
+### Deep Dive in Modules 
+```
+function x(){
+  const a = 10;
+  function y(){
+    console.log('b')
+  }
+}
+console.log(a) => output reference error a is not defined
+```
+- This is how js works a is only accesable to inside x only this function x is a private sapce for a
+- Module is also works like this 
+- Whenever a new module is created nodejs takes the code from that file wraps it a function and then execute it 
+- And it will not interfere with onther file
+- So module.exports = 
+- All the code of the module is wrapped inside a function when require is called 
+- Now when the code is wrapped then it's not just a simple function but IIFE (immidately invoke function expression)
+
+```
+(function (){
+  All the code of your module runs inside this IIFE
+})()
+```
+- require("./path")
+- `It keeps your varaiable and function private`
+- Question how are variables and functions private in different module `Because of IIFE and require statement`
+- How do you get access to moudle to export where does the module.exports coming from 
+- Who added this `module`
+- Node JS providing module and require
+```
+(function (module,require){
+  All code of module inside this
+})(module,require)
+```
+- So node js takes my code wrap inside IIFE with moduel and require params and then give it to v8 engine and then v8 engine execute this IIFE
+
+![alt text](image-3.png)
+
+#### 5 STEPS of require
+- Resolving the module
+  - It checks wheather the module is a local path
+- continue from 5.mp4 (25.33)
